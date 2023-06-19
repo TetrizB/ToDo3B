@@ -1,0 +1,133 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital@1&display=swap'); 
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300&display=swap");
+.img1 {
+    position: absolute;
+    bottom: 0;
+}
+
+.img2 {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: flex-end;
+}
+
+.login {
+    box-sizing: border-box;
+
+    position: absolute;
+    width: 608px;
+    height: 682px;
+    left: calc(50% - 608px/2 + 10px);
+    top: calc(50% - 682px/2);
+
+    background: #FFFFFF;
+    border: 1px solid #000000;
+    border-radius: 20px;
+}
+.texto{
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+    justify-content: center;
+    padding-top: 65px;
+
+    color: #000000;
+}
+.txtBtn{
+    text-align: left;
+    color: #000000;
+}
+.botoes{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding-top: 60px;
+    font-family: 'Roboto', sans-serif;
+
+
+}
+.btn1{
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    cursor: pointer;
+
+    padding-left: 10px;
+    margin-bottom: 25px;
+
+    width: 400px;
+    height: 59px;
+    left: 59px;
+    top: 150px;
+
+    
+    border: 1px solid #000000;
+    border-radius: 20px;
+}
+.btn2{
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    cursor: pointer;
+
+    padding-left: 10px;
+    margin-bottom: 25px;
+    
+    margin-top: 15px;
+    width: 400px;
+    height: 59px;
+    left: 59px;
+    top: 150px;
+
+    color: #000000;
+    border: 1px solid #000000;
+    border-radius: 20px;
+}
+
+.btn5{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    font-family: 'Inter', sans-serif;
+    cursor: pointer;
+
+    
+    margin-top: 20px;
+    width: 110px;
+    height: 35px;
+    
+    
+    background-color: #00ff00;
+    color: #000000;
+    border: 1px solid #000000;
+    border-radius:11px;
+
+}
+
+.btn4{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    font-family: 'Inter', sans-serif;
+    cursor: pointer;
+
+
+    margin-top: 20px;
+   margin-right: 190px ;
+    width: 110px;
+    height: 35px;
+    
+
+    background-color: #e98839;
+    color: #000000;
+    border: 1px solid #000000;
+    border-radius: 11px;
+}
+
+.evaldo{
+    display: flex;
+    justify-content: space-evenly;
+}
