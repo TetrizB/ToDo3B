@@ -1,78 +1,95 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:ital@1&display=swap');
-.img1 {
-    position: absolute;
-    bottom: 0;
+body{
+    margin: 0;
+    padding:0 ;
+    
 }
 
-.img2 {
+.email{
+margin-bottom: 30px;
+
+}
+
+.content{
     display: flex;
-    flex-direction: column-reverse;
-    align-items: flex-end;
+    justify-content: center;
+    align-items: center;
+    margin-top: 80px;
+    
 }
-
-.login {
-    box-sizing: border-box;
-
-    position: absolute;
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: 608px;
     height: 682px;
-    left: calc(50% - 608px/2 + 10px);
-    top: calc(50% - 682px/2);
-
+    text-align: center;
     background: #FFFFFF;
     border: 1px solid #000000;
     border-radius: 20px;
 }
-.texto{
-    text-align: center;
-    font-family: 'Roboto', sans-serif;
-    justify-content: center;
-    padding-top: 65px;
 
-    color: #000000;
-}
-.txtBtn{
-    text-align: center;
-
-    color: #FFFFFF;
-}
-.botoes{
+.login {
+  
     display: flex;
-    align-items: center;
     flex-direction: column;
-    padding-top: 180px;
-    font-family: 'Roboto', sans-serif;
-    cursor: pointer;
-}
-.btn1{
-    box-sizing: border-box;
-    display: flex;
-    align-items: center;
     justify-content: center;
-
-    width: 228px;
-    height: 59px;
-    left: 59px;
-    top: 150px;
-
-    background: #000000;
-    border: 1px solid #000000;
-    border-radius: 20px;
-}
-.btn2{
-    box-sizing: border-box;
-    display: flex;
     align-items: center;
-    justify-content: center;
     
-    margin-top: 15px;
-    width: 228px;
-    height: 59px;
-    left: 59px;
-    top: 150px;
-
-    color: #000000;
-    border: 1px solid #000000;
-    border-radius: 20px;
 }
 
+.texto {
+    font-family: 'Roboto', sans-serif;
+    color: #000000;
+    margin-top: 0;
+}
+
+.formulario input {
+    width: 400px;
+    height: 35px;
+    padding: 10px;
+    margin-bottom: 40px;
+    border-radius: 30px;
+    border: 1px solid rgb(0, 0, 0);
+}
+
+.botoes {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.btn1 {
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 110px;
+    height: 35px;
+    margin-right: 80px;
+    background: #e98839;
+    color: #FFFFFF;
+    border: 1px solid #000000;
+    border-radius: 10px;
+   
+
+    font-family: 'Roboto', sans-serif;
+    font-size: 10px;
+
+}
+
+.btn2 {
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 110px;
+    height: 35px;
+    margin-left: 80px;
+    background: #00ff00;
+    color: #FFFFFF;
+    border: 1px solid #000000;
+    border-radius: 10px;
+ 
+
+    font-family: 'Roboto', sans-serif;
+    font-size: 10px;
+}
