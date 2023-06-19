@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Model.O</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css?family=Nunito:400,600,700,800,900" rel="stylesheet">
+</head>
+
+<body>
+    <nav class="nav">
+        <div class="nav_buttons">
+            <select class="botao" name="select">
+                <option value="valor1" selected>Telas</option>
+            </select>
+            <input type="text" id="txtBusca" placeholder="Pesquisa" class="pesquisa" />
+        </div>
+        <button type="submit" value="submit" name="salvar" class="save">Criar Bord</button>
+    </nav>
+    <main class="main">
+        <div class="boards">
+            <div class="board fazer">
+                <div class="aFazer">
+                    <h3>A Fazer</h3>
+                    <button class="add-button" onclick="toggleCreateComponent()">+</button>
+                </div>
+                <div id="createComponentForm" class="create-component">
+                    <div class="titleCreate">
+                        <span class="title">+ Adicionar tarefa</span>
+                        <span class="close-button" onclick="cancelComponent()">x</span>
+                    </div>
+                    <div class="containerElements">
+                        <input id="nome" type="text" placeholder="Nome..." class="name">
+                        <div id="colorButtons">
+                            <button class="color-button" style="background-color: #23d2ac"
+                                onclick="selectColor('#23d2ac')"></button>
+                            <button class="color-button" style="background-color: #33adff"
+                                onclick="selectColor('#33adff')"></button>
+                            <button class="color-button" style="background-color: #FF0000"
+                                onclick="selectColor('#FF0000')"></button>
+                        </div>
+                        <input id="importancia" type="hidden">
+                        <div class="dropdown">
+                            <button class="dropdown-button um " onclick="toggleDatePicker('dataInicio')">Data Início
+                                ▼</button>
+                            <div id="datePickerInicio" class="dropdown-content">
+                                <label for="selectedDateInicio">Data Início:</label>
+                                <input type="date" id="selectedDateInicio" onchange="selectDate('dataInicio')">
+                            </div>
+                        </div>
+
+                        <div class="dropdown">
+                            <button class="dropdown-button dois" onclick="toggleDatePicker('dataLimite')">Data Limite
+                                ▼</button>
+                            <div id="datePickerLimite" class="dropdown-content">
+                                <label for="selectedDateLimite">Data Limite:</label>
+                                <input type="date" id="selectedDateLimite" onchange="selectDate('dataLimite')">
+                            </div>
+                        </div>
+                    
+                    <div class="salvar">
+                        <button class="saveButton" onclick="saveComponent()">Salvar</button>
+                    </div>
+                </div>
+                </div>
+                <div class="dropzone">
+                    <div class="card" draggable="true">
+                        <div class="status-div">
+                            <div class="status green"></div>
+                            <div class="data_inicio">17/09</div>
+                            <div class="data_limit">31/09</div>
+                        </div>
+                        <div class="content">Tarefa de Matematica</div>
+                    </div>
+                </div>
+            </div>
+            <div class="board fazendo">
+                <div class="aFazer">
+                <h3>Fazendo</h3>
+            </div>
+                <div class="dropzone">
+                    <div class="card" draggable="true">
+                        <div class="status-div ">
+                            <div class="status blue"></div>
+                            <div class="data_inicio">12/12</div>
+                            <div class="data_limit">21/12</div>
+                        </div>
+                        <div class="content">Tarefa de Portugues</div>
+                    </div>
+                </div>
+            </div>
+            <div class="board terminado">
+                <div class="aFazer">
+                <h3>Terminado</h3>
+            </div>
+                <div class="dropzone ">
+                    <div class="card" draggable="true">
+                        <div class="status-div">
+                            <div class="status red"></div>
+                            <div class="data_inicio">19/1</div>
+                            <div class="data_limit">20/1</div>
+                        </div>
+                        <div class="content">Tarefa de Biologia</div>
+                    </div>
+                </div>
+            </div>
+            <div class="board revisar">
+                <div class="aFazer">
+                <h3>Revisar</h3>
+            </div>
+                <div class="dropzone ">
+                    <div class="card" draggable="true">
+                        <div class="status-div">
+                            <div class="status red"></div>
+                            <div class="data_inicio">12/7</div>
+                            <div class="data_limit">24/8</div>
+                        </div>
+                        <div class="content">Tarefa de Biologia</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script src="/script.js"></script>
+    </main>
+</body>
+
+</html>

@@ -1,0 +1,355 @@
+* {
+    border: 0;
+    margin: 0;
+    padding: 0;
+    font-family: 'Nunito';
+   
+}
+
+.nav {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-evenly;
+    align-items: center;
+    background: #1A1A1C;
+    height: 68px;
+    left: 0;
+    top: 0;
+    margin-bottom: 20px;
+}
+
+.botao {
+    
+    color: white;
+    width: 11rem;
+    height: 39px;
+    top: 0,9375rem;
+    margin-right: 25px;
+    background: #000000;
+    border-radius: 5px;
+    cursor: pointer;
+
+    font-style: normal;
+    font-weight:600;
+    font-size: 20px;
+    line-height: 24px;
+}
+
+.pesquisa {
+    
+    width: 28,6875rem;
+    height: 39px;
+    padding-left: 10px;
+    background: white;
+    border: 1px solid #000000;
+    border-radius: 10px;
+
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 24px;
+}
+.pesquisa[type="text"]::placeholder {
+    font-size: 20px;
+    line-height: 16px;
+    color: #000000;
+    padding-left: 9px;
+  }
+
+.save {
+    
+    color: #ffffff;
+    width: 11rem;
+    height: 39px;
+    background: #000000;
+    border-radius: 5px;
+    cursor: pointer;
+
+    font-style: normal;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 24px;
+}
+
+/* Agora começa as Brincadeiras */
+body{
+    background: #130f0d; 
+}
+::-webkit-scrollbar {
+    height: 9px; /* altura do scroll */
+  }
+  ::-webkit-scrollbar-thumb {
+    background-color: black; /* Cor da barra de rolagem */
+  }
+
+  ::-webkit-scrollbar-track {
+    background-color: #130f0d; /* Cor de fundo da alça do scroll */
+  }
+
+.boards{
+    
+    white-space: nowrap;
+    overflow-y:hidden;
+    overscroll-behavior:none ;
+    display: flex;
+    flex-wrap: nowrap;
+    margin-top: 32px;
+    min-height: 500px;
+}
+
+.board{
+    background: #141316;
+    
+    border-radius: 10px;
+    margin: 0 16px
+}
+.fazer{
+    background: #FF8D85;
+}
+.fazendo{
+background: #F4A858;
+}
+.revisar{
+    background: #F2D06B;
+}
+.terminado{
+    background: #A8CBEB;
+}
+
+.board .aFazer{
+    display: flex;
+    justify-content: space-between;
+    background: #000000;
+    border-radius: 10px 10px 0px 0px;
+    height: 32px;
+    padding: 16px;
+    color: white;
+  }
+  /* Adiconar Card*/
+.add-button  {
+    z-index: 1;
+    font-size: 18px;
+    color: white;
+    background: none;
+    border: none;
+    cursor: pointer;
+  }
+.dropzone{
+    padding: 16px;
+    min-width: 282px;
+    min-height: 200px;
+}
+
+.card{
+    padding: 16px;
+    box-shadow: 0 2px 2px -1px #FD951Fcc;
+    width: 250px;
+    border-radius: 4px;
+    font-weight: 600;
+    font-size: 18px;
+    margin-bottom: 10px;
+
+    background: #1A1A1C;
+    color: #D9D9D9;
+}
+.status-div{
+    display: flex;
+    padding: 1px ;
+    font-size: 8px;
+    font-weight: 900;
+    color: black;
+}
+.status{
+    width: 30px;
+    height: 18px;
+    margin-bottom: 16px;
+    border-radius: 8px;
+    margin: 0 8px;
+}
+.status.green{
+    background: #23d2ac;
+}
+.status.blue{
+    background: #33adff;
+}
+.status.red{
+    background: red;
+}
+.highlight{
+    background: #fd951f08;
+}
+/* Estilize os botões de cores */
+
+.data_inicio{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 30px;
+    height: 18px;
+    margin: 0 8px;
+
+    background: #86DB43;
+    margin-bottom: 16px;
+    border-radius: 8px;
+}
+.data_limit{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 30px;
+    height: 18px;
+    margin: 0 8px;
+    
+    background: #F07A54;
+    margin-bottom: 16px;
+    border-radius: 8px;
+}
+.card, .dropzone{
+    transition: 400ms;
+}
+.is-dragging{
+    cursor: move;
+    opacity: 0.3;
+}
+.over{
+    background: #4cd13711;
+}
+
+
+
+  
+  .containerElements{
+    display: flex;
+    flex-wrap: wrap;
+    margin: 11px;
+    justify-content: space-around;
+    align-items: center;
+    align-content: center;
+    flex-direction: row;
+  }
+  .salvar{
+    margin-top: 10px;
+    margin-bottom: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    width: 274px;
+    height: 48px;
+    background: #D9D9D9;
+  }
+  .saveButton{
+    width: 274px;
+    height: 48px;
+    cursor: pointer;
+    color: #000000;
+    background: none;
+    font-weight: 700;
+    font-size: 20px;
+  }
+  /* Estilize a tela de criação do componente */
+  .create-component {
+    display: none;
+
+    position: absolute;
+    top: 50%;
+    left: 40%;
+    transform: translate(-120%, -80%);
+    
+    width: 297px;
+    height: 185px;
+    background-color: #ffffff;
+
+    box-shadow: 4px 4px 10px 10px  rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+    z-index: 2;
+  }
+
+  
+  
+  /* Estilize o campo de entrada */
+  .create-component input {
+    margin-top: 10px;
+    display: block;
+    margin-bottom: 10px;
+  }
+
+  /* Estilize o botão de fechar e o titulo do componente */
+  .titleCreate{ 
+    background: #D9D9D9;
+    display: flex;
+    top: 0;
+    width: 100%;
+    height: 39px;
+    align-items: center;
+    justify-content: space-between;
+    
+    border-radius: 10px 10px 0px 0px;
+}
+  .close-button {
+    padding-right: 10px;
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: bold;
+  }
+  .title {
+    padding-left: 10px;
+    font-size: 18px;
+    font-weight: bold;
+  }
+
+  .name{
+    box-sizing: border-box;
+    width: 126px;
+    height: 27px;
+    background: rgba(217,217,217,0.65);
+    border: 1px solid rgba(117,115,115, 0.58);
+    border-radius: 20px;
+}
+.name[type="text"]::placeholder {
+    font-size: 13px;
+    line-height: 16px;
+    color: #000000;
+    padding-left: 9px;
+  }
+.color-button {
+    width: 41px;
+    height: 21px;
+    border-radius: 20px;
+    margin-right: 2px;
+    border: none;
+    cursor: pointer;
+    transition: 100ms;
+  }
+  .color-button:hover{
+    border: #000000 solid 2px;
+  }
+  
+  .dropdown-button {
+    padding: 4px 8px;
+
+    font-size: 14px;
+    min-width: 125px;
+    height:24px;
+    border-radius: 20px;
+  }
+  .um {
+    margin-right: 11px;
+    background: #AFF469;
+  }
+  .dois{
+    background: #F19173 ;
+  }
+  
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    padding: 12px 16px;
+    z-index: 1;
+  }
+  
+  .dropdown:hover .dropdown-content {
+    display: block;
+    }
